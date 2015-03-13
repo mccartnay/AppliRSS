@@ -7,4 +7,43 @@ public class Site {
 	private String nom;
 	private String url;
 	private ArrayList<News> news;
+	private boolean favori;
+	
+	public void updateNews(){
+		this.news.clear();
+	}
+	
+	//Getter and Setter
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public ArrayList<News> getNews() {
+		return news;
+	}
+	public void setNews(ArrayList<News> news) {
+		this.news = news;
+	}
+	public boolean isFavori() {
+		return favori;
+	}
+	public void setFavori(boolean favori) {
+		this.favori = favori;
+	}
+	
+	
 }

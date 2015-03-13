@@ -8,11 +8,11 @@ public class Site {
 	private String url;
 	private ArrayList<News> news;
 	private boolean favori;
-	
+
 	public void updateNews(){
 		this.news.clear();
 	}
-	
+
 	//Getter and Setter
 	public int getId() {
 		return id;
@@ -44,6 +44,11 @@ public class Site {
 	public void setFavori(boolean favori) {
 		this.favori = favori;
 	}
-	
-	
+
+	public void sauvegarder() {
+
+		//void
+
+	}
+
 }

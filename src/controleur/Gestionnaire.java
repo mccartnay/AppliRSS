@@ -74,4 +74,10 @@ public class Gestionnaire {
 
 	}
 
+	public void sauvegarderBDD() {
+
+		//void
+
+	}
+
 }

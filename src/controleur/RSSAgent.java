@@ -1,4 +1,4 @@
-package beans;
+package controleur;
 
 public class RSSAgent {
 

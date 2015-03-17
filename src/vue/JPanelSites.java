@@ -1,7 +1,7 @@
 /*
  * JPanelSites.java
  *
- * Copyright (C) 2015 Mathieu Gaborit (matael) <mathieu@matael.org>
+ * Copyright (C) 2015 Erwan Marchand (mccartnay) <erwan.marchand@orange.fr>
  *
  *
  * Distributed under WTFPL terms

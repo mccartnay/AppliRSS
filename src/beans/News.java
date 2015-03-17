@@ -8,7 +8,7 @@ public class News {
 	private Date date;
 	private String texte;
 	private String urlNews;
-	
+
 	//Getter and Setter
 	public int getId() {
 		return id;
@@ -40,7 +40,11 @@ public class News {
 	public void setUrlNews(String urlNews) {
 		this.urlNews = urlNews;
 	}
-	
-	
+
+	public void consulterNews() {
+
+		//void
+
+	}
 
 }

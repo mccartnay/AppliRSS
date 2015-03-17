@@ -27,24 +27,26 @@ public class JPanelMenu extends JPanel {
 	private JButton bActualiser;
 	private JButton bQuitter;
 	private JButton bSites;
+	private MoteurUI moteurUI;
 
-	public JPanelMenu() {
+	public JPanelMenu(MoteurUI unMoteurUI) {
 
+		moteurUI = unMoteurUI;
 		bActualiser = new JButton("Actualiser");
 		bQuitter = new JButton("Quitter");
 		bSites = new JButton("Sites");
 
 		this.add(bSites, BorderLayout.SOUTH);
-		bSites.addActionListener(new ActionListener(){
-			public void ActionPerformed(ActionEvent e) {
-
+		bSites.addMouseListener(new MouseAdapter(){
+			public void MouseClicked(MouseEvent event) {
+				moteurUI.setPanel(PANEL_SITE);
 			}
 		});
 
 		this.add(bActualiser, BorderLayout.SOUTH);
-		bActualiser.addActionListener(new ActionListener(){
-			public void ActionPerformed(ActionEvent e) {
-
+		bActualiser.addMouseListener(new MouseAdapter(){
+			public void MouseClicked(MouseEvent event) {
+				moteurUI.actualiser();
 			}
 		});
 

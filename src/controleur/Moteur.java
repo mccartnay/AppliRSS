@@ -3,12 +3,10 @@ package controleur;
 public class Moteur {
 
 	private Gestionnaire gestionnaire;
-	private MoteurUI moteurUI;
 
-	public Moteur(Gestionnaire unGestionnaire, MoteurUI unMoteurUI) {
+	public Moteur(Gestionnaire unGestionnaire) {
 
 		gestionnaire = unGestionnaire;
-		moteurUi = unMoteurUI;
 
 	}
 

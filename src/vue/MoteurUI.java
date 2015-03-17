@@ -22,6 +22,11 @@
  *
  */
 
+import java.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+
 public class MoteurUI extends JFrame {
 
 	private JPanelMenu JPM;

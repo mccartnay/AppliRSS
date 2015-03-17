@@ -44,21 +44,15 @@ public class MoteurUI extends JFrame {
 	}
 
 
-	public void paint() {
+	public void paint(Graphics g) {
 
-
-
-	}
-
-	public void repaint() {
-
-
+		super.paint();
 
 	}
 
 	public void actualiser() {
 
-
+		repaint();
 
 	}
 

@@ -28,6 +28,7 @@ public class MoteurUI extends JFrame {
 	private JPanelNews JPN;
 	private JPanelSites JPS;
 	private Moteur moteur;
+	private int panel;
 
 	public MoteurUI(JPanelMenu uneJPM, JPanelNews uneJPN, JPanelSites uneJPS, Moteur unMoteur) {
 
@@ -52,6 +53,12 @@ public class MoteurUI extends JFrame {
 
 	public void actualiser() {
 
+		if (panel = PANEL_MENU) {
+		}
+		if (panel = PANEL_SITE) {
+		}
+		if (panel = PANEL_NEWS) {
+		}
 		repaint();
 
 	}

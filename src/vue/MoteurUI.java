@@ -36,6 +36,11 @@ public class MoteurUI extends JFrame {
 		JPS = uneJPS;
 		moteur = unMoteur;
 
+		setSize(800,600);
+		setTitle("AppliRSS");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 	}
 
 

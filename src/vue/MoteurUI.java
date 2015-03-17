@@ -27,12 +27,14 @@ public class MoteurUI {
 	private JFrameMenu JFM;
 	private JFrameNews JFN;
 	private JFrameSites JFS;
+	private Moteur moteur;
 
-	public MoteurUI(JFrameMenu uneJFM, JFrameNews uneJFN, JFrameSites uneJFS) {
+	public MoteurUI(JFrameMenu uneJFM, JFrameNews uneJFN, JFrameSites uneJFS, Moteur unMoteur) {
 
 		JFM = uneJFM;
 		JFN = uneJFN;
 		JFS = uneJFS;
+		moteur = unMoteur;
 
 	}
 

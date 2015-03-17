@@ -32,6 +32,7 @@ public class JPanelMenu extends JPanel {
 	private JButton bActualiser;
 	private JButton bQuitter;
 	private JButton bSites;
+	private JList lNews;
 	private MoteurUI moteurUI;
 
 	public JPanelMenu(MoteurUI unMoteurUI) {
@@ -40,6 +41,7 @@ public class JPanelMenu extends JPanel {
 		bActualiser = new JButton("Actualiser");
 		bQuitter = new JButton("Quitter");
 		bSites = new JButton("Sites");
+		lNews = new JList(moteurUI.getNews());
 
 		this.add(bSites, BorderLayout.SOUTH);
 		bSites.addMouseListener(new MouseAdapter(){

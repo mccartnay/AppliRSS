@@ -8,7 +8,7 @@ public class Gestionnaire {
 	public Gestionnaire(RSSAgent unAgent) {
 
 		sites = new ArrayListe();
-		agent = unAgant;
+		agent = unAgent;
 
 	}
 

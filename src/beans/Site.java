@@ -51,4 +51,16 @@ public class Site {
 
 	}
 
+	public void connecter() {
+
+	
+
+	}
+
+	public void afficherNews() {
+
+	
+
+	}
+
 }

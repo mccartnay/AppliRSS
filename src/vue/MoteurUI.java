@@ -22,18 +22,18 @@
  *
  */
 
-public class MoteurUI {
+public class MoteurUI extends JFrame {
 
-	private JFrameMenu JFM;
-	private JFrameNews JFN;
-	private JFrameSites JFS;
+	private JPanelMenu JPM;
+	private JPanelNews JPN;
+	private JPanelSites JPS;
 	private Moteur moteur;
 
-	public MoteurUI(JFrameMenu uneJFM, JFrameNews uneJFN, JFrameSites uneJFS, Moteur unMoteur) {
+	public MoteurUI(JPanelMenu uneJPM, JPanelNews uneJPN, JPanelSites uneJPS, Moteur unMoteur) {
 
-		JFM = uneJFM;
-		JFN = uneJFN;
-		JFS = uneJFS;
+		JPM = uneJPM;
+		JPN = uneJPN;
+		JPS = uneJPS;
 		moteur = unMoteur;
 
 	}

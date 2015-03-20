@@ -3,30 +3,34 @@ package beans;
 import java.util.Date;
 
 public class News {
-	private int id;
 	private String titre;
-	private Date date;
 	private String texte;
 	private String urlNews;
-	
+
+
+	public News(String unTitre, String texte, String uneUrl) {
+
+		titre = unTritre;
+		texte = unTexte;
+		urlNews = uneUrl;
+
+	}
+
+	public News() {
+
+		titre = "";
+		texte = "";
+		urlNews = "";
+
+	}
+
+
 	//Getter and Setter
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	public String getTitre() {
 		return titre;
 	}
 	public void setTitre(String titre) {
 		this.titre = titre;
-	}
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
 	}
 	public String getTexte() {
 		return texte;
@@ -40,7 +44,11 @@ public class News {
 	public void setUrlNews(String urlNews) {
 		this.urlNews = urlNews;
 	}
-	
-	
+
+	public void consulterNews() {
+
+		//void
+
+	}
 
 }

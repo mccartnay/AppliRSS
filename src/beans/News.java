@@ -9,6 +9,17 @@ public class News {
 	private String texte;
 	private String urlNews;
 
+
+	public News(int unId, String unTitre, Date uneDate, String texte, String uneUrl) {
+
+		id = unId;
+		titre = unTritre;
+		date = uneDate;
+		texte = unTexte;
+		urlNews = uneUrl;
+
+	}
+
 	//Getter and Setter
 	public int getId() {
 		return id;

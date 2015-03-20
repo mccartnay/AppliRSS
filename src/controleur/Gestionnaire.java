@@ -28,9 +28,9 @@ public class Gestionnaire {
 
 	}
 
-	public void AfficherTout() {
+	public ArrayList<Site> getAll() {
 
-		//void
+		return sites;
 
 	}
 

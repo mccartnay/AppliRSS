@@ -32,7 +32,7 @@ public class Site {
 
 	public void ajouterNews(News uneNews) {
 
-		news.push(unNews);
+		news.add(uneNews);
 
 	}
 

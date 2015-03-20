@@ -1,5 +1,11 @@
 package controleur;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import beans.News;
+import beans.Site;
+
 public class Gestionnaire {
 
 	private ArrayList<Site> sites;
@@ -7,7 +13,7 @@ public class Gestionnaire {
 
 	public Gestionnaire(RSSAgent unAgent) {
 
-		sites = new ArrayListe();
+		sites = new ArrayList<Site>();
 		agent = unAgent;
 		initialiserSites();
 		majNews();
@@ -16,7 +22,7 @@ public class Gestionnaire {
 
 	//Getter and Setter
 
-	public Agent getAgent() {
+	public RSSAgent getAgent() {
 
 		return agent;
 
@@ -42,13 +48,13 @@ public class Gestionnaire {
 
 	public void ajoutFavoris(Site unSite) {
 
-		unSite.setFavoris(true);
+		unSite.setFavori(true);
 
 	}
 
 	public void supprimerFavoris(Site unSite) {
 
-		unSite.setFavoris(false);
+		unSite.setFavori(false);
 
 	}
 
@@ -77,16 +83,17 @@ public class Gestionnaire {
 		//Récupérer les trois listes qu'il nous renvoit
 		//Les parcourir en même temps pour ajouter les news au Site courant
 
-		List<String> descriptions = new List<String>();
-		List<String> liens = new List<String>();
-		List<String> titres = new ListString>();
+		ArrayList<String> descriptions = new ArrayList<String>();
+		ArrayList<String> liens = new ArrayList<String>();
+		ArrayList<String> titres = new ArrayList<String>();
 		News news = new News();
 		int i = 0;
-		Iterator iter = new sites.iterator();
+		Iterator<Site> iter = sites.iterator();
 		while(iter.hasNext()) {
+			
 
-			agent.setAdress(iter.next().getUrl());
-			descriptions = agent.getDescriptions();
+			agent.setAddress(iter.next().getUrl());
+			descriptions = agent.getDescription();
 			liens = agent.getLink();
 			titres = agent.getTitle();
 			iter.next().razNews();

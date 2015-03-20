@@ -8,9 +8,9 @@ public class News {
 	private String urlNews;
 
 
-	public News(String unTitre, String texte, String uneUrl) {
+	public News(String unTitre, String unTexte, String uneUrl) {
 
-		titre = unTritre;
+		titre = unTitre;
 		texte = unTexte;
 		urlNews = uneUrl;
 

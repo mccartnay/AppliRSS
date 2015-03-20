@@ -9,6 +9,19 @@ public class Site {
 	private ArrayList<News> news;
 	private boolean favori;
 
+
+	public Site(int unId, String unNom, String uneUrl) {
+
+		id = unId;
+		nom = unNom;
+		url = uneUrl;
+		news = new ArrayList<News>();
+		favori = false;
+
+	}
+
+
+
 	public void updateNews(){
 		this.news.clear();
 	}

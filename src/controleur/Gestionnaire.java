@@ -73,7 +73,33 @@ public class Gestionnaire {
 
 	public void majNews() {
 
-		//void
+		//Parcourir liste des sites et demander les news à RSSAgent
+		//Récupérer les trois listes qu'il nous renvoit
+		//Les parcourir en même temps pour ajouter les news au Site courant
+
+		List<String> descriptions = new List<String>();
+		List<String> liens = new List<String>();
+		List<String> titres = new ListString>();
+		News news = new News();
+		int i = 0;
+		Iterator iter = new sites.iterator();
+		while(iter.hasNext()) {
+
+			agent.setAdress(iter.next().getUrl());
+			descriptions = agent.getDescriptions();
+			liens = agent.getLink();
+			titres = agent.getTitle();
+			iter.next().razNews();
+			for(i; i<titres.length();i++) {
+
+				news.setTitre(titres(i));
+				news.setUrlNews(liens(i));
+				news.setTexte(descriptions(i));
+				iter.next().ajouterNews(news);
+
+			}
+
+		}
 
 	}
 

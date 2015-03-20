@@ -21,8 +21,14 @@ public class Site {
 	}
 
 
+	public void ajouterNews(News uneNews) {
 
-	public void updateNews(){
+		news.push(unNews);
+
+	}
+
+
+	public void razNews(){
 		this.news.clear();
 	}
 

@@ -9,6 +9,8 @@ public class Gestionnaire {
 
 		sites = new ArrayListe();
 		agent = unAgent;
+		initialiserSites();
+		majNews();
 
 	}
 
@@ -62,6 +64,13 @@ public class Gestionnaire {
 
 	}
 
+	public void initialiserSites() {
+
+		//charger sites en BDD dans la liste
+
+	}
+
+
 	public void majNews() {
 
 		//void
@@ -70,13 +79,17 @@ public class Gestionnaire {
 
 	public void trierSite() {
 
-		//void
+		for (Site s : sites) {
+
+			//balancer les sites favoris au début de la liste
+
+		}
 
 	}
 
 	public void sauvegarderBDD() {
 
-		//void
+		sauvegarderSites(sites);
 
 	}
 

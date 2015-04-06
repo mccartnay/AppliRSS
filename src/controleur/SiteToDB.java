@@ -54,6 +54,30 @@ public class SiteToDB {
 
 		return 1;
 	}
+	
+	/**
+	 * Vide la table et ajoute une liste de sites à la bdd
+	 * @param liste d'objets Site
+	 * @return 1 si l'opération c'est bien passé, 0 si un problème est survenu
+	 */
+	public int updateTableSites(ArrayList<Site> sites){
+		String sql = "TRUNCATE TABLE "+NOM_TABLE;
+		
+		try {
+			stmt.executeUpdate(sql);
+
+		} catch (SQLException e) {
+			return 0;
+		}
+		
+		for(Site s : sites){
+			if(insertSite(s) == 0){
+				return 0;
+			}	
+		}
+		
+		return 1;
+	}
 
 	/**
 	 * Permet de récuperer la liste de site de la bdd

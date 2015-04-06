@@ -10,9 +10,12 @@ public class Gestionnaire {
 
 	private ArrayList<Site> sites;
 	private RSSAgent agent;
+	private SiteToDB siteToDB;
 
 	public Gestionnaire(RSSAgent unAgent) {
 
+		siteToDB = new SiteToDB();
+		
 		sites = new ArrayList<Site>();
 		agent = unAgent;
 		initialiserSites();
@@ -73,6 +76,7 @@ public class Gestionnaire {
 	public void initialiserSites() {
 
 		//charger sites en BDD dans la liste
+		sites = siteToDB.getAllSite();
 
 	}
 
@@ -87,21 +91,21 @@ public class Gestionnaire {
 		ArrayList<String> liens = new ArrayList<String>();
 		ArrayList<String> titres = new ArrayList<String>();
 		News news = new News();
-		int i = 0;
+		
 		Iterator<Site> iter = sites.iterator();
 		while(iter.hasNext()) {
 			
 
 			agent.setAddress(iter.next().getUrl());
-			descriptions = agent.getDescription();
-			liens = agent.getLink();
-			titres = agent.getTitle();
+			descriptions = (ArrayList<String>) agent.getDescription();
+			liens = (ArrayList<String>) agent.getLink();
+			titres = (ArrayList<String>) agent.getTitle();
 			iter.next().razNews();
-			for(i; i<titres.length();i++) {
+			for(int i=0; i<titres.size();i++) {
 
-				news.setTitre(titres(i));
-				news.setUrlNews(liens(i));
-				news.setTexte(descriptions(i));
+				news.setTitre(titres.get(i));
+				news.setUrlNews(liens.get(i));
+				news.setTexte(descriptions.get(i));
 				iter.next().ajouterNews(news);
 
 			}
@@ -121,9 +125,7 @@ public class Gestionnaire {
 	}
 
 	public void sauvegarderBDD() {
-
-		sauvegarderSites(sites);
-
+		siteToDB.updateTableSites(sites);
 	}
 
 }

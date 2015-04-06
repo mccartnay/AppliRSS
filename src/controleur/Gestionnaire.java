@@ -115,13 +115,17 @@ public class Gestionnaire {
 	}
 
 	public void trierSite() {
+		ArrayList<Site> listeTmp = new ArrayList<Site>();
 
 		for (Site s : sites) {
-
-			//balancer les sites favoris au début de la liste
-
+			if(s.isFavori())
+				listeTmp.add(s);
 		}
-
+		for (Site s : sites) {
+			if(!s.isFavori())
+				listeTmp.add(s);
+		}
+		sites = listeTmp;
 	}
 
 	public void sauvegarderBDD() {

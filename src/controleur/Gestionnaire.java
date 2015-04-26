@@ -2,6 +2,7 @@ package controleur;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import beans.News;
 import beans.Site;
@@ -11,6 +12,7 @@ public class Gestionnaire {
 	private ArrayList<Site> sites;
 	private RSSAgent agent;
 	private SiteToDB siteToDB;
+	private List<NewsUpdatedListener> listeners = new ArrayList<NewsUpdatedListener>();
 
 	public Gestionnaire(RSSAgent unAgent) {
 
@@ -22,6 +24,11 @@ public class Gestionnaire {
 		majNews();
 
 	}
+	
+	
+	public void addListener(NewsUpdatedListener toAdd) {
+        listeners.add(toAdd);
+    }
 
 	//Getter and Setter
 
@@ -110,6 +117,11 @@ public class Gestionnaire {
 
 			}
 
+		}
+		
+		//informe les listeners des mises à jours
+		for(NewsUpdatedListener listener : listeners){
+			listener.newsUpdated();
 		}
 
 	}

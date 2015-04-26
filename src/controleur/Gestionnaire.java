@@ -21,7 +21,7 @@ public class Gestionnaire {
 		sites = new ArrayList<Site>();
 		agent = unAgent;
 		initialiserSites();
-		majNews();
+		//majNews();
 
 	}
 	
@@ -70,6 +70,7 @@ public class Gestionnaire {
 
 	public void ajouterSite(Site unSite) {
 
+		System.out.println(unSite);
 		sites.add(unSite);
 
 	}

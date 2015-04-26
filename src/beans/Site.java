@@ -22,7 +22,7 @@ public class Site {
 
 	public Site() {
 
-		id = -1;
+		//id = -1;
 		nom = "";
 		url = "";
 		news = new ArrayList<News>();

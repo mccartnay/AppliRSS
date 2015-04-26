@@ -103,7 +103,7 @@ public class SiteToDB {
 			}
 
 		} catch (SQLException e) {
-			return null;
+			return new ArrayList<Site>();
 		}
 
 		return listAllSite;

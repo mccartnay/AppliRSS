@@ -21,6 +21,8 @@ public class Main {
 		
 		gest.ajouterSite(s1);
 		gest.addListener(t);
+		
+		gest.majNews();
 	}
 
 }

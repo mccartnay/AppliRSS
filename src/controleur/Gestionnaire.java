@@ -19,6 +19,7 @@ public class Gestionnaire {
 		siteToDB = new SiteToDB();
 		
 		sites = new ArrayList<Site>();
+
 		agent = unAgent;
 		initialiserSites();
 		//majNews();
@@ -70,7 +71,6 @@ public class Gestionnaire {
 
 	public void ajouterSite(Site unSite) {
 
-		System.out.println(unSite);
 		sites.add(unSite);
 
 	}
@@ -100,6 +100,23 @@ public class Gestionnaire {
 		ArrayList<String> titres = new ArrayList<String>();
 		News news = new News();
 		
+		for(Site s : sites){
+			agent.setAddress(s.getUrl());
+			descriptions = (ArrayList<String>) agent.getDescription();
+			liens = (ArrayList<String>) agent.getLink();
+			titres = (ArrayList<String>) agent.getTitle();
+			s.razNews();
+			
+			for(int i=0; i<titres.size();i++) {
+
+				news.setTitre(titres.get(i));
+				news.setUrlNews(liens.get(i));
+				news.setTexte(descriptions.get(i));
+				s.ajouterNews(news);
+
+			}
+		}
+		/*
 		Iterator<Site> iter = sites.iterator();
 		while(iter.hasNext()) {
 			
@@ -119,7 +136,7 @@ public class Gestionnaire {
 			}
 
 		}
-		
+		*/
 		//informe les listeners des mises à jours
 		for(NewsUpdatedListener listener : listeners){
 			listener.newsUpdated();

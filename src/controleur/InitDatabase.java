@@ -12,7 +12,7 @@ import java.sql.Statement;
  *
  */
 public class InitDatabase {
-	private final String CHEMIN_FICHIER = "test.db";
+	private final String CHEMIN_FICHIER = "test.sqlite";
 	private final String NOM_TABLE = "SITES";
 
 	private Connection c = null;

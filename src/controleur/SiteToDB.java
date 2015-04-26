@@ -103,6 +103,7 @@ public class SiteToDB {
 			}
 
 		} catch (SQLException e) {
+			e.printStackTrace();
 			return new ArrayList<Site>();
 		}
 

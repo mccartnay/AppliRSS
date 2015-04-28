@@ -1,3 +1,5 @@
+package vue;
+
 /*
  * JPanelNews.java
  *
@@ -22,14 +24,17 @@
  *
  */
 
-import java.swing.*;
+import javax.swing.*;
+
 import java.awt.event.*;
 import java.awt.*;
+import java.util.ArrayList;
 
-public class JPanelNews {
+public class JPanelNews extends JPanel{
 
 	private JButton bQuitter;
 	private MoteurUI moteurUI;
+	private ArrayList<News>
 
 	public JPanelNews(MoteurUI unMoteurUI) {
 

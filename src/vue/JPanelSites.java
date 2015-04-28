@@ -1,3 +1,5 @@
+package vue;
+
 /*
  * JPanelSites.java
  *
@@ -22,11 +24,11 @@
  *
  */
 
-import java.swing.*;
+import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class JPanelSites {
+public class JPanelSites extends JPanel{
 
 	private JButton bQuitter;
 	private MoteurUI moteurUI;

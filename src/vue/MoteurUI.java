@@ -1,3 +1,5 @@
+package vue;
+
 /*
  * MoteurUI.java
  *
@@ -22,7 +24,7 @@
  *
  */
 
-import java.swing.*;
+import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
@@ -32,15 +34,15 @@ public class MoteurUI extends JFrame {
 	private JPanelMenu JPM;
 	private JPanelNews JPN;
 	private JPanelSites JPS;
-	private Moteur moteur;
+	//private Moteur moteur;
 	private int panel;
 
-	public MoteurUI(JPanelMenu uneJPM, JPanelNews uneJPN, JPanelSites uneJPS, Moteur unMoteur) {
+	public MoteurUI(JPanelMenu uneJPM, JPanelNews uneJPN, JPanelSites uneJPS/*, Moteur unMoteur*/) {
 
 		JPM = uneJPM;
 		JPN = uneJPN;
 		JPS = uneJPS;
-		moteur = unMoteur;
+		//moteur = unMoteur;
 
 		setSize(800,600);
 		setTitle("AppliRSS");
@@ -52,7 +54,7 @@ public class MoteurUI extends JFrame {
 
 	public void paint(Graphics g) {
 
-		super.paint();
+		super.paint(g);
 
 	}
 
